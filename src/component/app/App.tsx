@@ -1,7 +1,3 @@
-/* eslint-disable react/jsx-no-constructed-context-values */
-/* eslint-disable no-param-reassign */
-/* eslint-disable import/no-cycle */
-/* eslint-disable no-nested-ternary */
 import * as React from 'react';
 import {
   useState, useCallback,
@@ -9,7 +5,6 @@ import {
 import { nanoid } from 'nanoid';
 import TodoList from '../todoList/TodoList';
 import AddTodo from '../addTodos/AddTodos';
-import Context from '../../context';
 import FilterTodo from '../filterTodo/FilterTodo';
 import './app.scss';
 
@@ -19,8 +14,6 @@ type TodoType = {
   title: string
   visible: boolean
 };
-
-// const AddTodo = React.lazy(() => import('../addTodos/AddTodos'));
 
 function App(): JSX.Element {
   const [todos, setTodos] = useState<Array<TodoType>>([]);
